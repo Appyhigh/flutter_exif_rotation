@@ -83,6 +83,9 @@ class FlutterExifRotationPlugin : FlutterPlugin, MethodCallHandler {
         } catch (e: IOException) {
             result.error("error", "IOexception", null)
             e.printStackTrace()
+        } catch (e: NullPointerException){
+            result.error("error", "NullPointerException", null)
+            e.printStackTrace()
         }
     }
 
